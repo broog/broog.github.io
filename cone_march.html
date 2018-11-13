@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script src="sitecore.js"></script>
+  </head>
+  <body>
+  <script>siteHeader()</script>
+	<div class="container">
+	<h1>My First Bootstrap Page</h1>
+	<p>This part is inside a .container class.</p> 
+	<p>The .container class provides a responsive fixed width container.</p>           
+
+    <pre class="language-glsl"><code>
+// Tetrahedron technique from http://iquilezles.org/www/articles/normalsSDF/normalsSDF.htm
+vec3 calcWorldNormal(in vec3 p)
+{
+    const float h = 0.0001;
+    const vec2 k = vec2(1,-1);
+    return normalize(k.xyy*worldSDF(p + k.xyy*h).v +
+                     k.yyx*worldSDF(p + k.yyx*h).v +
+                     k.yxy*worldSDF(p + k.yxy*h).v +
+                     k.xxx*worldSDF(p + k.xxx*h).v);
+}</code></pre>
+</div>
+<script src="prism.js"></script>
+  </body>
+</html>
